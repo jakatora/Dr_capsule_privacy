@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Polityka prywatności — DrCapsule</title>
+<style>
+:root{
+  --bg:#0b1220;
+  --card:#101a33;
+  --text:#eaf0ff;
+  --muted:#a9b6d7;
+  --accent:#66d0ff;
+  --accent2:#7cffb7;
+  --border:rgba(255,255,255,.12);
+  --shadow: 0 18px 60px rgba(0,0,0,.45);
+  --radius: 18px;
+  --max: 980px;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color:var(--text);
+  background:
+    radial-gradient(1200px 800px at 15% 10%, rgba(102,208,255,.22), transparent 60%),
+    radial-gradient(1000px 700px at 80% 15%, rgba(124,255,183,.18), transparent 55%),
+    radial-gradient(1200px 800px at 50% 110%, rgba(120,140,255,.12), transparent 55%),
+    var(--bg);
+  line-height:1.55;
+}
+
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+header{
+  position:sticky; top:0;
+  backdrop-filter: blur(10px);
+  background: rgba(11,18,32,.62);
+  border-bottom:1px solid var(--border);
+  z-index:50;
+}
+.nav{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:14px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+}
+.brand{
+  display:flex; align-items:center; gap:10px;
+  font-weight:800; letter-spacing:.2px;
+}
+.logo{
+  width:34px; height:34px; border-radius:12px;
+  background: linear-gradient(145deg, rgba(102,208,255,.95), rgba(124,255,183,.92));
+  box-shadow: 0 10px 24px rgba(102,208,255,.18);
+  position:relative;
+}
+.logo::after{
+  content:"";
+  position:absolute; inset:7px;
+  border-radius:10px;
+  background: rgba(11,18,32,.35);
+  border:1px solid rgba(255,255,255,.22);
+}
+.navlinks{display:flex; gap:14px; flex-wrap:wrap}
+.navlinks a{
+  color:var(--text);
+  opacity:.9;
+  padding:8px 10px;
+  border-radius:12px;
+  border:1px solid transparent;
+}
+.navlinks a:hover{border-color:var(--border); background: rgba(255,255,255,.04)}
+
+main{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:26px 18px 56px;
+}
+.hero{
+  border:1px solid var(--border);
+  background: linear-gradient(180deg, rgba(16,26,51,.82), rgba(16,26,51,.52));
+  border-radius:var(--radius);
+  box-shadow: var(--shadow);
+  padding:22px 20px;
+  overflow:hidden;
+  position:relative;
+}
+.badges{
+  display:flex; gap:10px; flex-wrap:wrap;
+  margin-top:14px;
+}
+.badge{
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  padding:7px 10px;
+  border-radius:999px;
+  color:var(--muted);
+  font-size:13px;
+}
+.h1{
+  font-size:34px;
+  margin:0;
+  line-height:1.15;
+}
+.sub{
+  margin:10px 0 0;
+  color:var(--muted);
+  max-width:70ch;
+}
+.grid{
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap:16px;
+  margin-top:16px;
+}
+@media (max-width: 860px){
+  .grid{grid-template-columns:1fr}
+  .h1{font-size:30px}
+}
+.card{
+  border:1px solid var(--border);
+  background: rgba(16,26,51,.62);
+  border-radius:var(--radius);
+  box-shadow: 0 10px 40px rgba(0,0,0,.25);
+  padding:18px 18px;
+}
+.card h2{margin:0 0 10px; font-size:18px}
+.card p{margin:0 0 8px; color:var(--muted)}
+.btnrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+.btn{
+  display:inline-flex; align-items:center; gap:10px;
+  border-radius:14px;
+  padding:10px 12px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  color:var(--text);
+  font-weight:700;
+}
+.btn:hover{background: rgba(255,255,255,.08); text-decoration:none}
+.kbd{
+  font-family: var(--mono);
+  font-size:12px;
+  padding:3px 8px;
+  border:1px solid var(--border);
+  border-bottom-color: rgba(0,0,0,.35);
+  border-radius:10px;
+  background: rgba(0,0,0,.15);
+  color: var(--muted);
+}
+article{
+  margin-top:18px;
+  border:1px solid var(--border);
+  background: rgba(16,26,51,.55);
+  border-radius:var(--radius);
+  padding:22px 18px;
+}
+article h1{margin:0 0 8px; font-size:28px}
+article h2{margin:24px 0 8px; font-size:18px}
+article p, article li{color:var(--muted)}
+article ul{margin:8px 0 0 20px}
+hr{border:none; border-top:1px solid var(--border); margin:18px 0}
+.footer{
+  margin-top:20px;
+  color:var(--muted);
+  font-size:13px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+}
+.small{font-size:13px; color:var(--muted)}
+.notice{
+  margin-top:10px;
+  border:1px dashed rgba(255,255,255,.22);
+  border-radius:14px;
+  padding:12px 12px;
+  background: rgba(0,0,0,.12);
+  color: var(--muted);
+}
+
+header,.nav,.navlinks{display:none !important}
+main{padding-top:16px}
+</style>
+</head>
+<body>
+<main>
+
+<article>
+  <h1>Polityka prywatności — DrCapsule</h1>
+  <p class="small"><strong>Data wejścia w życie:</strong> 2026-03-01</p>
+  <p>
+    Niniejsza Polityka prywatności opisuje, w jaki sposób aplikacja mobilna <strong>DrCapsule</strong>
+    (pakiet: <span class="kbd">dr_capsule</span>) przetwarza informacje.
+  </p>
+
+  <h2>1. Administrator / kontakt</h2>
+  <p>
+    W sprawach związanych z prywatnością możesz skontaktować się pod adresem:
+    <a href="mailto:jakatorawow@gmail.com">jakatorawow@gmail.com</a>.
+  </p>
+
+  <h2>2. Zakres zbieranych danych</h2>
+  <p>
+    <strong>DrCapsule nie zbiera i nie przesyła danych osobowych na serwery</strong>.
+    Aplikacja działa w trybie offline i nie wymaga konta.
+  </p>
+  <ul>
+    <li><strong>Dane lokalne:</strong> zapis gry (rekordy, statystyki, ustawienia, historia rozgrywek) przechowywane wyłącznie na urządzeniu.</li>
+    <li><strong>Brak analityki:</strong> aplikacja nie używa narzędzi analitycznych do śledzenia użytkowników.</li>
+    <li><strong>Brak reklam:</strong> aplikacja nie wyświetla reklam i nie udostępnia danych reklamodawcom.</li>
+  </ul>
+
+  <h2>3. Uprawnienia urządzenia</h2>
+  <p>
+    Aplikacja nie wymaga dostępu do wrażliwych uprawnień (np. kontaktów, lokalizacji, SMS).
+    Jeżeli system poprosi o standardowe uprawnienia związane z działaniem aplikacji, wynikają one z platformy lub
+    bibliotek systemowych.
+  </p>
+
+  <h2>4. Dane dzieci</h2>
+  <p>
+    Aplikacja nie jest zaprojektowana do zbierania danych osobowych od dzieci.
+    Ponieważ nie zbieramy danych ani nie prowadzimy kont, nie prowadzimy również profilowania użytkowników.
+  </p>
+
+  <h2>5. Udostępnianie danych</h2>
+  <p>
+    Nie sprzedajemy, nie wynajmujemy ani nie udostępniamy danych osobowych podmiotom trzecim —
+    ponieważ ich nie zbieramy.
+  </p>
+
+  <h2>6. Przechowywanie danych</h2>
+  <p>
+    Dane gry zapisane lokalnie pozostają na urządzeniu do momentu ich usunięcia przez użytkownika
+    (np. poprzez odinstalowanie aplikacji lub wyczyszczenie danych aplikacji w ustawieniach systemu).
+  </p>
+
+  <h2>7. Bezpieczeństwo</h2>
+  <p>
+    Ponieważ aplikacja działa offline i nie przesyła danych na serwery, głównym obszarem bezpieczeństwa
+    jest Twoje urządzenie. Zalecamy aktualizowanie systemu operacyjnego i stosowanie blokady ekranu.
+  </p>
+
+  <h2>8. Zmiany polityki</h2>
+  <p>
+    Jeśli w przyszłości dodamy funkcje wymagające zbierania danych (np. konta, chmura, analityka, crash reporting),
+    zaktualizujemy tę politykę i zmienimy datę wejścia w życie.
+  </p>
+
+  <h2>9. Prawa użytkownika</h2>
+  <p>
+    Jeśli masz pytania o tę politykę, skontaktuj się z nami:
+    <a href="mailto:jakatorawow@gmail.com">jakatorawow@gmail.com</a>.
+    Ponieważ nie przetwarzamy danych osobowych na serwerach, zakres żądań (dostęp/usunięcie/przeniesienie) dotyczy
+    w praktyce danych lokalnych na Twoim urządzeniu.
+  </p>
+
+  <hr />
+  <p class="small">
+    Ten dokument ma charakter informacyjny i jest przygotowany dla aplikacji działającej offline, bez kont i bez analityki.
+  </p>
+</article>
+
+</main>
+</body>
+</html>
